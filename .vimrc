@@ -4,6 +4,10 @@ set nocompatible
 filetype off
 "" General Settings
 
+" Set up Pathogen Bundle Mangement
+call pathogen#infect()
+call pathogen#helptags()
+
 " Enable syntax highlighting.
 syntax on
 
@@ -36,11 +40,11 @@ map <F1> <Esc>
 imap <F1> <Esc>
 
 " Show special characters
-if v:version >= 700
-    set list listchars=tab:>-,trail:.,extends:>,nbsp:_
-else
-    set list listchars=tab:>-,trail:.,extends:>
-endif
+"if v:version >= 700
+"    set list listchars=tab:>-,trail:.,extends:>,nbsp:_
+"else
+"    set list listchars=tab:>-,trail:.,extends:>
+"endif
 
 " Don't break up long lines, but visually wrap them.
 set textwidth=0
@@ -72,7 +76,7 @@ set statusline+=%-3.3n\ " buffer number
 set statusline+=%f\ " filename
 set statusline+=%h%m%r%w " status flags
 set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type
-"set statusline+=%{fugitive#statusline()} " Fugitive status
+set statusline+=%{fugitive#statusline()} " Fugitive status
 set statusline+=%= " right align remainder
 set statusline+=0x%-8B " character value
 set statusline+=%-14(%l,%c%V%) " line, character
@@ -164,6 +168,16 @@ imap <c-s> <Esc>:w<CR>a
 
 " Reformatting options. See `:help fo-table`
 set formatoptions+=lnor1
+
+" Enable Mouse support
+if has("mouse")
+        set mouse=a
+endif
+
+" Set Up Key Bindings
+let mapleader = ","
+map <leader>T :CommandT <Return>
+
 
 " Disable spellcheck by default
 set nospell

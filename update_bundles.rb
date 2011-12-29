@@ -1,10 +1,8 @@
 #!/usr/bin/env ruby
 
 git_bundles = [ 
-  "git://github.com/astashov/vim-ruby-debugger.git",
   "git://github.com/ervandew/supertab.git",
   "git://github.com/godlygeek/tabular.git",
-  "git://github.com/hallison/vim-rdoc.git",
   "git://github.com/msanders/snipmate.vim.git",
   "git://github.com/pangloss/vim-javascript.git",
   "git://github.com/scrooloose/nerdtree.git",
@@ -18,14 +16,20 @@ git_bundles = [
   "git://github.com/tpope/vim-repeat.git",
   "git://github.com/tpope/vim-surround.git",
   "git://github.com/tpope/vim-vividchalk.git",
-  "git://github.com/tsaleh/taskpaper.vim.git",
   "git://github.com/tsaleh/vim-matchit.git",
   "git://github.com/tsaleh/vim-shoulda.git",
   "git://github.com/tsaleh/vim-tcomment.git",
   "git://github.com/tsaleh/vim-tmux.git",
   "git://github.com/vim-ruby/vim-ruby.git",
   "git://github.com/vim-scripts/Gist.vim.git",
-  "git://github.com/wincent/Command-T.git"
+  "git://github.com/wincent/Command-T.git",
+  "git://github.com/tpope/vim-unimpaired.git",
+  "git://github.com/altercation/vim-colors-solarized.git",
+  "https://github.com/tpope/vim-commentary.git",
+  "https://github.com/kchmck/vim-coffee-script.git",
+  "git://github.com/vim-scripts/ZoomWin.git",
+  "https://github.com/godlygeek/tabular.git",
+  "https://github.com/scrooloose/nerdcommenter.git"
 ]
 
 vim_org_scripts = [

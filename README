@@ -1,0 +1,4 @@
+Installation
+cd ~
+git clone git://github.com/counterbeing/Vim-Configuration.git .vim
+ln -s .vim/.vimrc 

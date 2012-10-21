@@ -35,7 +35,7 @@ set showmatch
 set incsearch
 set hls
 set t_Co=256
-set background=dark
+set background=light
 color solarized
 nnoremap <CR> :nohlsearch<cr>
 set cursorline
@@ -45,7 +45,9 @@ set numberwidth=5
 command! W :w
 let mapleader=","
 imap <c-c> <esc>
+imap <S-CR> <CR><CR>end<Esc>-cc
 map <leader>n :NERDTreeToggle <Return>
+let NERDTreeDirArrows=0
 set nowrap
 " Status line
 set laststatus=2

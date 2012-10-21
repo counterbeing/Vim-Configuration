@@ -20,6 +20,7 @@ git_bundles = [
   "git://github.com/tsaleh/vim-shoulda.git",
   "git://github.com/tsaleh/vim-tcomment.git",
   "git://github.com/tsaleh/vim-tmux.git",
+  "git://github.com/groenewege/vim-less.git",
   "git://github.com/vim-ruby/vim-ruby.git",
   "git://github.com/vim-scripts/Gist.vim.git",
   "git://github.com/wincent/Command-T.git",
@@ -29,7 +30,10 @@ git_bundles = [
   "https://github.com/kchmck/vim-coffee-script.git",
   "git://github.com/vim-scripts/ZoomWin.git",
   "https://github.com/godlygeek/tabular.git",
-  "https://github.com/scrooloose/nerdcommenter.git"
+  "https://github.com/scrooloose/nerdcommenter.git",
+  "https://github.com/hughbien/md-vim.git",
+  "https://github.com/rodjek/vim-puppet.git",
+  "https://github.com/mileszs/ack.vim.git"
 ]
 
 vim_org_scripts = [

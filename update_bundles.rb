@@ -33,7 +33,9 @@ git_bundles = [
   "https://github.com/scrooloose/nerdcommenter.git",
   "https://github.com/hughbien/md-vim.git",
   "https://github.com/rodjek/vim-puppet.git",
-  "https://github.com/mileszs/ack.vim.git"
+  "https://github.com/avakhov/vim-yaml.git",
+  "https://github.com/mileszs/ack.vim.git",
+  "git://github.com/othree/html5.vim.git"
 ]
 
 vim_org_scripts = [

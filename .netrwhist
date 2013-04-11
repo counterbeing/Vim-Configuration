@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/cory/.gem'
+let g:netrw_dirhist_2='/Users/cory/Documents/Projects/TickiWiki-Staging/.git'
+let g:netrw_dirhist_3='/Users/cory/.teamocil'
+let g:netrw_dirhist_4='/Users/cory/Documents/Projects/simian/simian-2.1/etc/simian/ssl'
+let g:netrw_dirhist_5='/Users/cory/Documents/Projects/puppet-dashboard'
+let g:netrw_dirhist_6='/Users/cory/.teamocil'

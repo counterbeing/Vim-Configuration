@@ -25,6 +25,7 @@ set ruler
 set showcmd
 map Q gq
 filetype plugin indent on
+autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=ruby | endif
 set autoindent
 set expandtab
 set tabstop=2
@@ -61,5 +62,4 @@ set statusline+=%= " right align remainder
 set statusline+=0x%-8B " character value
 set statusline+=%-14(%l,%c%V%) " line, character
 set statusline+=%<%P " file position
-
 

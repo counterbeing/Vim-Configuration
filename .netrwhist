@@ -1,8 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/cory/.gem'
 let g:netrw_dirhist_2='/Users/cory/Documents/Projects/TickiWiki-Staging/.git'
 let g:netrw_dirhist_3='/Users/cory/.teamocil'
 let g:netrw_dirhist_4='/Users/cory/Documents/Projects/simian/simian-2.1/etc/simian/ssl'
 let g:netrw_dirhist_5='/Users/cory/Documents/Projects/puppet-dashboard'
 let g:netrw_dirhist_6='/Users/cory/.teamocil'
+let g:netrw_dirhist_7='/Users/cory'
+let g:netrw_dirhist_8='/Users/cory/.teamocil'
+let g:netrw_dirhist_9='/Users/cory/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/nesta-0.9.13'

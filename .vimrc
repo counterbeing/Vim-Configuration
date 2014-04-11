@@ -8,7 +8,7 @@ call pathogen#helptags()
 
 " Enable Mouse support
 if has("mouse")
-        set mouse=a
+  set mouse=a
 endif
 
 
@@ -62,4 +62,8 @@ set statusline+=%= " right align remainder
 set statusline+=0x%-8B " character value
 set statusline+=%-14(%l,%c%V%) " line, character
 set statusline+=%<%P " file position
+
+" Fuzzy Finder
+map ,t :FufFile **/<CR>
+
 

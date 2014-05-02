@@ -64,6 +64,6 @@ set statusline+=%-14(%l,%c%V%) " line, character
 set statusline+=%<%P " file position
 
 " Fuzzy Finder
-map ,t :FufFile **/<CR>
+nnoremap <Leader>t :FufFile **/<cr>
 
 

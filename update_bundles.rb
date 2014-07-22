@@ -26,6 +26,8 @@ git_bundles = [
   "git://github.com/tsaleh/vim-tmux.git",
   "git://github.com/groenewege/vim-less.git",
   "git://github.com/vim-ruby/vim-ruby.git",
+  "https://github.com/kana/vim-textobj-user",
+  "https://github.com/nelstrom/vim-textobj-rubyblock",
   "git://github.com/vim-scripts/Gist.vim.git",
   "git://github.com/altercation/vim-colors-solarized.git",
   "git://github.com/vim-scripts/ZoomWin.git",
@@ -52,6 +54,10 @@ require 'fileutils'
 require 'open-uri'
 
 bundles_dir = File.join(File.dirname(__FILE__), "bundle")
+
+unless File.exists?(bundles_dir)
+   FileUtils.mkdir(bundles_dir) 
+end
 
 FileUtils.cd(bundles_dir)
 

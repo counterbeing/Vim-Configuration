@@ -49,6 +49,7 @@ imap <c-c> <esc>
 imap <S-CR> <CR><CR>end<Esc>-cc
 map <leader>n :NERDTreeToggle <Return>
 let NERDTreeDirArrows=0
+let NERDTreeIgnore = ['\.DS_Store$']
 set nowrap
 " Status line
 set laststatus=2
@@ -65,5 +66,4 @@ set statusline+=%<%P " file position
 
 " Fuzzy Finder
 nnoremap <Leader>t :FufFile **/<cr>
-
 

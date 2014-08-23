@@ -17,7 +17,7 @@ git_bundles = [
   "git://github.com/tpope/vim-haml.git",
   "git://github.com/tpope/vim-markdown.git",
   "git://github.com/tpope/vim-rails.git",
-  "git://github.com/tsaleh/vim-tcomment.git",
+  "https://github.com/tomtom/tcomment_vim",
   "git://github.com/tsaleh/vim-tmux.git",
   "git://github.com/groenewege/vim-less.git",
   "git://github.com/vim-ruby/vim-ruby.git",

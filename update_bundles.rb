@@ -9,6 +9,7 @@ git_bundles = [
   "https://github.com/tpope/vim-liquid",
   "git://github.com/msanders/snipmate.vim.git",
   "git://github.com/pangloss/vim-javascript.git",
+  "https://github.com/elzr/vim-json",
   "https://github.com/kchmck/vim-coffee-script.git",
   "git://github.com/digitaltoad/vim-jade.git",
   "git://github.com/tpope/vim-surround.git",

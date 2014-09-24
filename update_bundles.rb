@@ -20,6 +20,7 @@ git_bundles = [
   "https://github.com/tomtom/tcomment_vim",                # Super fast commenting (try gcc for one line)
   "git://github.com/tsaleh/vim-tmux.git",
   "git://github.com/groenewege/vim-less.git",
+  "https://github.com/cakebaker/scss-syntax.vim",
   "git://github.com/vim-ruby/vim-ruby.git",
   "git://github.com/altercation/vim-colors-solarized.git",
   "https://github.com/taylor/vim-zoomwin",                 # Zooms in on a specific window when you have a bunch of splits

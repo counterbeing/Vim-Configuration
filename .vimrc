@@ -75,7 +75,6 @@ nnoremap <Leader>t :FufFile **/<cr>
 " The following sets a variable to keep track of paste mode, and turns
 " both paste mode and insert lines on and off for copying and pasting 
 " related activities.
-let g:indentLine_char = '︙'
 let g:pasteMode = 0
 function Meow()
   if g:pasteMode 

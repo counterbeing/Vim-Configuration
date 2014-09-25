@@ -71,3 +71,23 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P                               " offset
 " Fuzzy Finder
 nnoremap <Leader>t :FufFile **/<cr>
 
+" Paste Mode
+" The following sets a variable to keep track of paste mode, and turns
+" both paste mode and insert lines on and off for copying and pasting 
+" related activities.
+let g:indentLine_char = '︙'
+let g:pasteMode = 0
+function Meow()
+  if g:pasteMode 
+    IndentLinesEnable
+    set paste
+    let g:pasteMode = 0
+    echom "Paste mode OFF!"
+  else
+    IndentLinesDisable
+    set nopaste
+    let g:pasteMode = 1
+    echom "Paste mode ON!"
+  endif
+endfunction
+map <leader>p :call Meow()<cr>

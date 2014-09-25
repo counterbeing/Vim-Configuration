@@ -80,13 +80,17 @@ function PasteToggle()
   if g:pasteMode 
     IndentLinesEnable
     set number
-    set paste
+    set nopaste
+    if has("mouse")
+      set mouse=a
+    endif
     let g:pasteMode = 0
     echom "Paste mode OFF!"
   else
     IndentLinesDisable
-    set nopaste
+    set paste
     set nonumber
+    set mouse=""
     let g:pasteMode = 1
     echom "Paste mode ON!"
   endif

@@ -80,11 +80,13 @@ function PasteToggle()
   if g:pasteMode 
     IndentLinesEnable
     set paste
+    set nonumber
     let g:pasteMode = 0
     echom "Paste mode OFF!"
   else
     IndentLinesDisable
     set nopaste
+    set number
     let g:pasteMode = 1
     echom "Paste mode ON!"
   endif

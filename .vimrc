@@ -76,7 +76,7 @@ nnoremap <Leader>t :FufFile **/<cr>
 " both paste mode and insert lines on and off for copying and pasting 
 " related activities.
 let g:pasteMode = 0
-function Meow()
+function PasteToggle()
   if g:pasteMode 
     IndentLinesEnable
     set paste
@@ -89,4 +89,4 @@ function Meow()
     echom "Paste mode ON!"
   endif
 endfunction
-map <leader>p :call Meow()<cr>
+map <leader>p :call PasteToggle()<cr>

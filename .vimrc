@@ -84,6 +84,7 @@ function PasteToggle()
     if has("mouse")
       set mouse=a
     endif
+    setlocal conceallevel=2
     let g:pasteMode = 0
     echom "Paste mode OFF!"
   else
@@ -91,6 +92,7 @@ function PasteToggle()
     set paste
     set nonumber
     set mouse=""
+    setlocal conceallevel=0
     let g:pasteMode = 1
     echom "Paste mode ON!"
   endif

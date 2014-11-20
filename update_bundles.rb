@@ -37,6 +37,7 @@ git_bundles = [
     "cd ~/.vim/bundle/tern_for_vim/; npm install"],        # This second line in the array runs the install command
   "https://github.com/vim-scripts/FuzzyFinder",            # Searching for files more quickly
   "https://github.com/vim-scripts/L9",                     # This is a requirement for FuzzyFinder
+  "https://github.com/kien/ctrlp.vim",
   "https://github.com/mileszs/ack.vim.git",                # Allows searching through many files for a specific string
   "https://github.com/Yggdroot/indentLine"                 # Adds vertical lines for code blocks
 ]

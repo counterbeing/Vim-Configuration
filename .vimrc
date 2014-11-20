@@ -73,36 +73,7 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P                               " offset
 " -----------------------------------------------------------------------------
 " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-" FuzzyFinder
-" -----------------------------------------------------------------------------
-function! FufSetIgnore()
-
-    let ignorefiles = [ $HOME . "/.gitignore", ".gitignore" ]
-    let exclude_vcs = '\.(hg|git|bzr|svn|cvs)'
-    let ignore = '\v\~$'
-
-    for ignorefile in ignorefiles
-
-        if filereadable(ignorefile)
-            for line in readfile(ignorefile)
-                if match(line, '^\s*$') == -1 && match(line, '^#') == -1
-                    let line = substitute(line, '^/', '', '')
-                    let line = substitute(line, '\.', '\\.', 'g')
-                    let line = substitute(line, '\*', '.*', 'g')
-                    let ignore .= '|^' . line
-                endif
-            endfor
-        endif
-
-        let ignore .= '|^' . exclude_vcs
-        let g:fuf_coveragefile_exclude = ignore
-        let g:fuf_file_exclude = ignore
-        let g:fuf_dir_exclude = ignore
-    endfor
-endfunction
-
-nnoremap <Leader>t :call FufSetIgnore() <BAR> :FufFile **/<cr>
+nnoremap <Leader>t :CtrlP<cr>
 
 " Paste Mode
 " The following sets a variable to keep track of paste mode, and turns

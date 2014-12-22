@@ -21,6 +21,7 @@ git_bundles = [
   "https://github.com/rodjek/vim-puppet.git",
   "https://github.com/avakhov/vim-yaml.git",
   "git://github.com/othree/html5.vim.git",
+  "https://github.com/Glench/Vim-Jinja2-Syntax",
 
   # Do Stuff Plugins
   "git://github.com/tpope/vim-surround.git",              # File Browser, sometimes you need to see the tree

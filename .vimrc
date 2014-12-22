@@ -39,7 +39,7 @@ set showmatch
 set incsearch
 set hls
 set t_Co=256
-set background=light
+set background=dark
 color solarized
 nnoremap <CR> :nohlsearch<cr>
 set cursorline
@@ -102,3 +102,10 @@ function PasteToggle()
   endif
 endfunction
 map <leader>p :call PasteToggle()<cr>
+
+set mouse+=a
+if &term =~ '^screen'
+  " tmux knows the extended mouse mode
+  " Allows for things like pane resizing within a tmux session
+  set ttymouse=xterm2
+endif

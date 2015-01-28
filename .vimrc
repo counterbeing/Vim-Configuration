@@ -80,6 +80,7 @@ nnoremap <Leader>t :CtrlP<cr>
 " both paste mode and insert lines on and off for copying and pasting 
 " related activities.
 let g:pasteMode = 0
+let g:indentLine_color_term = 100
 function PasteToggle()
   if g:pasteMode 
     IndentLinesEnable

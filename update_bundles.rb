@@ -8,6 +8,7 @@ git_bundles = [
   # Various Syntax Plugins
   "https://github.com/tpope/vim-liquid",
   "git://github.com/pangloss/vim-javascript.git",
+  "https://github.com/briancollins/vim-jst",
   "https://github.com/elzr/vim-json",
   "https://github.com/mustache/vim-mustache-handlebars.git",
   "https://github.com/kchmck/vim-coffee-script.git",
@@ -22,6 +23,7 @@ git_bundles = [
   "https://github.com/avakhov/vim-yaml.git",
   "git://github.com/othree/html5.vim.git",
   "https://github.com/Glench/Vim-Jinja2-Syntax",
+  "https://github.com/thoughtbot/vim-rspec",
 
   # Do Stuff Plugins
   "git://github.com/tpope/vim-surround.git",              # File Browser, sometimes you need to see the tree

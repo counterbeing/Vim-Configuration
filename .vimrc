@@ -11,6 +11,10 @@ if has("mouse")
   set mouse=a
 endif
 
+" Syntastic
+let g:syntastic_check_on_open=1
+let g:syntastic_javascript_checkers = ['jshint']
+
 
 set wildignore=vendor/rails/**
 set history=1000

@@ -76,16 +76,10 @@ set statusline+=%-14.(%l,%c%V%)\ %<%P                               " offset
 " Ctrl-P
 " -----------------------------------------------------------------------------
 " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-nnoremap <Leader>t :CtrlP<cr>
-let g:ctrlp_cmd = 'CtrlP'
-" let g:ctrlp_use_caching=0
-" function RefreshFiles()
-"   echom "Refreshing file list..."
-"   :call CtrlP#CtrlPClearAllCaches()
-"   " NERDTreeMapRefreshRoot()
-" endfunction
-" map <leader>r :call RefreshFiles()<cr>
+" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" nnoremap <Leader>t :CtrlP<cr>
+" let g:ctrlp_cmd = 'CtrlP'
+nnoremap <Leader>t :call PickFile()<CR>
 
 " Paste Mode
 " The following sets a variable to keep track of paste mode, and turns

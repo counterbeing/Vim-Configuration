@@ -26,6 +26,7 @@ git_bundles = [
   "https://github.com/Keithbsmiley/rspec.vim",
 
   # Do Stuff Plugins
+  "https://github.com/thoughtbot/pick.vim",
   "git://github.com/tpope/vim-surround.git",              # File Browser, sometimes you need to see the tree
   "git://github.com/scrooloose/nerdtree.git",
   "git://github.com/tpope/vim-fugitive.git",               # Vim based git access
@@ -38,7 +39,7 @@ git_bundles = [
   "https://github.com/scrooloose/syntastic.git",           # Shows syntax errors in sidebar
   ["https://github.com/marijnh/tern_for_vim",              # Interactive javascript lint, works with syntastic
     "cd ~/.vim/bundle/tern_for_vim/; npm install"],        # This second line in the array runs the install command
-  "https://github.com/kien/ctrlp.vim",                     # A fuzzy style finder
+  # "https://github.com/kien/ctrlp.vim",                     # A fuzzy style finder
   "https://github.com/mileszs/ack.vim.git",                # Allows searching through many files for a specific string
   "https://github.com/Yggdroot/indentLine"                 # Adds vertical lines for code blocks
 ]

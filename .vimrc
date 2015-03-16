@@ -6,9 +6,12 @@ let mapleader=","
 set nocompatible " enable modern features
 set hidden       " hide buffers so we don't have to write them when working on another file
 set lazyredraw   " redraw only when we need to.
-set history=1000
+set shortmess+=I                " No welcome screen
+set history=200                 " Remember the last 200 :ex commands
 
 syntax on
+let g:airline_powerline_fonts = 1
+let g:airline_theme='wombat'
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
@@ -47,8 +50,10 @@ set showmatch
 set incsearch " search as characters are entered
 set hls       "highlight search
 set t_Co=256
+color Flatlandia
+" color solarized
+" colorscheme solarized
 set background=dark
-color solarized
 nnoremap <CR> :nohlsearch<cr>
 set cursorline
 set cmdheight=1
@@ -61,20 +66,6 @@ map <leader>n :NERDTreeToggle <Return>
 let NERDTreeDirArrows=0
 let NERDTreeIgnore = ['\.DS_Store$']
 set nowrap
-
- " jamessan's
-set statusline=                                                     " clear the statusline for when vimrc is reloaded
-set statusline+=%-3.3n\                                             " buffer number
-set statusline+=%f\                                                 " file name
-set statusline+=%h%m%r%w                                            " flags
-set statusline+=[%{strlen(&ft)?&ft:'none'},                         " filetype
-set statusline+=%{strlen(&fenc)?&fenc:&enc},                        " encoding
-set statusline+=%{&fileformat}]                                     " file format
-set statusline+=%=                                                  " right align
-set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\   " highlight
-set statusline+=%b,0x%-8B\                                          " current char
-set statusline+=%-14.(%l,%c%V%)\ %<%P                               " offset
-
 
 
 " Custom Mappings

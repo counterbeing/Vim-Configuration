@@ -1,10 +1,20 @@
 set nocompatible
+let mapleader=","
 syntax on
 set hidden
 
 " Set up Pathogen Bundle Mangement
 call pathogen#infect()
 call pathogen#helptags()
+
+
+" New configuration
+set lazyredraw 
+set foldenable          " enable folding
+set foldlevelstart=10   " open most folds by default
+set foldnestmax=10      " 10 nested fold max
+set synmaxcol=220       " Keeps vim from slowing down on huge lines
+nmap <leader>j <Esc>:%!python -m json.tool<CR><ESC>gg=G<Esc>:noh<CR> "Pretty format json
 
 " Enable Mouse support
 if has("mouse")
@@ -40,8 +50,8 @@ set expandtab
 set laststatus=2
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
 set showmatch
-set incsearch
-set hls
+set incsearch " search as characters are entered
+set hls       "highlight search
 set t_Co=256
 set background=dark
 color solarized
@@ -51,7 +61,6 @@ set cmdheight=1
 set number
 " set numberwidth=5
 command! W :w
-let mapleader=","
 imap <c-c> <esc>
 imap <S-CR> <CR><CR>end<Esc>-cc
 map <leader>n :NERDTreeToggle <Return>
@@ -120,3 +129,5 @@ endif
 " Allow custom vim configs on a per project basis
 set exrc
 set secure
+
+

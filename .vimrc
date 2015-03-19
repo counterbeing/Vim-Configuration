@@ -3,13 +3,14 @@ call pathogen#infect()
 call pathogen#helptags()
 
 let mapleader=","
+syntax on
 set nocompatible " enable modern features
 set hidden       " hide buffers so we don't have to write them when working on another file
 set lazyredraw   " redraw only when we need to.
-set shortmess+=I                " No welcome screen
-set history=200                 " Remember the last 200 :ex commands
+set shortmess+=I " No welcome screen
+set history=200  " Remember the last 200 :ex commands
 
-syntax on
+
 let g:airline_powerline_fonts = 1
 let g:airline_theme='wombat'
 set foldenable          " enable folding
@@ -50,7 +51,7 @@ set showmatch
 set incsearch " search as characters are entered
 set hls       "highlight search
 set t_Co=256
-color Flatlandia
+color flattown
 " color solarized
 " colorscheme solarized
 set background=dark

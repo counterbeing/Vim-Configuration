@@ -35,7 +35,10 @@ git_bundles = [
   "git://github.com/tpope/vim-surround.git",        # For quickly changing surrounding characters
   "git://github.com/scrooloose/nerdtree.git",       # File Browser, sometimes you need to see the tree
   "git://github.com/tpope/vim-fugitive.git",        # Vim based git access
-  "git://github.com/msanders/snipmate.vim.git",     # For vim snippets
+  # "git://github.com/msanders/snipmate.vim.git",     # For vim snippets
+  ["https://github.com/Valloric/YouCompleteMe",
+  "cd ~/.vim/bundle/YouCompleteMe; ./install.sh --clang-completer"],
+  "https://github.com/SirVer/ultisnips",
   "https://github.com/tomtom/tcomment_vim",         # Super fast commenting (try gcc for one line)
   "git://github.com/tsaleh/vim-tmux.git",
   "https://github.com/taylor/vim-zoomwin",          # Zooms in on a specific window when you have a bunch of splits

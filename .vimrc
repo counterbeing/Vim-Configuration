@@ -9,12 +9,67 @@
 " This .vimrc file uses folding to manage the display of its contents.
 " Use the 'zR' command to open all of the sections if you're lost...
 " ----------------------------------------------------------------------------
+" Vundle                                                                   {{{
+" ----------------------------------------------------------------------------
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-liquid'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'burnettk/vim-angular'
+Plugin 'briancollins/vim-jst'
+Plugin 'elzr/vim-json'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'groenewege/vim-less'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'rodjek/vim-puppet'
+Plugin 'avakhov/vim-yaml'
+Plugin 'othree/html5.vim'
+Plugin 'Glench/Vim-Jinja2-Syntax'
+Plugin 'Keithbsmiley/rspec.vim'
+
+ " Do Stuff Plugins
+Plugin 'dhruvasagar/vim-table-mode' " Easily create tables
+Plugin 'blerins/flattown'           " Simple colors
+Plugin 'bling/vim-airline'          " Fancy bar at the bottom
+Plugin 'sjl/gundo.vim'              " Show tree of undos
+Plugin 'thoughtbot/pick.vim'        " Fuzzy finder replacement
+Plugin 'tpope/vim-surround'         " For quickly changing surrounding characters
+Plugin 'scrooloose/nerdtree'        " File Browser, sometimes you need to see the tree
+Plugin 'tpope/vim-fugitive'         " Vim based git access
+Plugin 'tomtom/tcomment_vim'        " Super fast commenting (try gcc for one line)
+Plugin 'taylor/vim-zoomwin'         " Zooms in on a specific window when you have a bunch of splits
+Plugin 'godlygeek/tabular'          " Regex based indentation
+Plugin 'scrooloose/syntastic'       " Shows syntax errors in sidebar
+Plugin 'marijnh/tern_for_vim'       " Interactive javascript lint, works with syntastic
+Plugin 'mileszs/ack.vim'            " Allows searching through many files for a specific string
+Plugin 'Yggdroot/indentLine'        " Adds vertical lines for code blocks
+" Currently evaluating these two...
+" Plugin 'Valloric/YouCompleteMe'
+" Plugin 'SirVer/ultisnips'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" }}}-------------------------------------------------------------------------
 " Base                                                                     {{{
 " ----------------------------------------------------------------------------
 
 " Set up Pathogen Bundle Mangement
-call pathogen#infect()
-call pathogen#helptags()
+" call pathogen#infect()
+" call pathogen#helptags()
 
 let mapleader=","
 set nocompatible " enable modern features
@@ -24,11 +79,6 @@ set shortmess+=I " No welcome screen
 set history=200  " Remember the last 200 :ex commands
 set exrc " Allow custom vim configs in project folders
 set secure " Don't allow malicious vim configs
-
-if has("autocmd")
-  " Automatically refreshes the .vimrc when you save it
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
 
 
 " }}}-------------------------------------------------------------------------
@@ -232,3 +282,4 @@ endfunction
 call InitBackupDir()
 " }}}
 " vim:foldmethod=marker:foldlevel=0
+

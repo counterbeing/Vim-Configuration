@@ -18,7 +18,7 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'            " Required for vundle
 Plugin 'tpope/vim-liquid'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
@@ -34,7 +34,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'groenewege/vim-less'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'rodjek/vim-puppet'
+" Plugin 'rodjek/vim-puppet'
 Plugin 'avakhov/vim-yaml'
 Plugin 'othree/html5.vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'

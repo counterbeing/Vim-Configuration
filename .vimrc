@@ -99,6 +99,8 @@ set noshowmode                    " don't show mode in last row, it's in airline
 set laststatus=2                  " Always display the status line
 let g:airline_powerline_fonts = 1 " Enable special powerline font (requires install)
 let g:airline_theme='wombat'
+let g:airline_left_sep=''         " Controls airline separator characters
+let g:airline_right_sep=''        " these can get a little goofy depending on font
 
 " }}}-------------------------------------------------------------------------
 " Input and Navigation                                                     {{{

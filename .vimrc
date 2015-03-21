@@ -147,6 +147,7 @@ command! W :w                    " For fat fingers: make :W == :w
 imap <c-c> <esc>|                " Map Ctrl-c to <Esc> to ease finger gymnastics
 imap <S-CR> <CR><CR>end<Esc>-cc| " Shift-Enger to insert 'end' from insert mode, broken?
 map <leader>m Jxi\n<ESC>|        " Merge Lines, replacing newlines with \n char
+map <leader>w :set wrap!<CR>|    " Toggle line wrapping
 nnoremap gV `[v`]|               " Highlight last inserted text
 
 " Shortcut to pretty-format ugly blocks of json
@@ -237,6 +238,24 @@ function PasteToggle()
   endif
 endfunction
 map <leader>p :call PasteToggle()<cr>
+
+
+
+
+" Reveal files in the finder
+function! RevealInFinder()
+  if filereadable(expand("%"))
+    let l:command = "open -R %"
+  elseif getftype(expand("%:p:h")) == "dir"
+    let l:command = "open %:p:h"
+  else
+    let l:command = "open ."
+  endif
+  execute ":silent! !" . l:command
+ " For terminal Vim not to look messed up.
+ redraw!
+endfunction 
+nmap <Leader>r :call RevealInFinder()<CR>
 
 
 " Automatically create backup/cache dirs for vim

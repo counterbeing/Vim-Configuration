@@ -34,7 +34,6 @@ Plugin 'tpope/vim-rails'
 Plugin 'groenewege/vim-less'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'vim-ruby/vim-ruby'
-" Plugin 'rodjek/vim-puppet'
 Plugin 'avakhov/vim-yaml'
 Plugin 'othree/html5.vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
@@ -180,7 +179,7 @@ autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 " }}}-------------------------------------------------------------------------
-" Color                                                                    {{{
+" Color & Syntax                                                           {{{
 " ----------------------------------------------------------------------------
 
 syntax on                   " enable file syntax highlighting
@@ -195,6 +194,7 @@ color flattown
 " colorscheme base16-tomorrow " set color scheme
 set background=dark         " Use dark instead of light
 
+let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
 " }}}-------------------------------------------------------------------------
 " Appearance                                                               {{{
 " ----------------------------------------------------------------------------

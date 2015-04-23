@@ -141,13 +141,14 @@ nnoremap <leader>u :GundoToggle<CR>|     " Gundo binding (ultra-undo plugin)
 " inline comments. Gross hack job. But look how pretty!
 
 command! Tab :Tabularize
-map Q gq|                        " shortcut to rewrap selected text
-command! W :w                    " For fat fingers: make :W == :w
-imap <c-c> <esc>|                " Map Ctrl-c to <Esc> to ease finger gymnastics
-imap <S-CR> <CR><CR>end<Esc>-cc| " Shift-Enger to insert 'end' from insert mode, broken?
-map <leader>m Jxi\n<ESC>|        " Merge Lines, replacing newlines with \n char
-map <leader>w :set wrap!<CR>|    " Toggle line wrapping
-nnoremap gV `[v`]|               " Highlight last inserted text
+map Q gq|                          " Shortcut to rewrap selected text
+command! W :w                      " For fat fingers: make :W == :w
+imap <c-c> <esc>|                  " Map Ctrl-c to <Esc> to ease finger gymnastics
+imap <S-CR> <CR><CR>end<Esc>-cc|   " Shift-Enger to insert 'end' from insert mode, broken?
+map <leader>m Jxi\n<ESC>|          " Merge Lines, replacing newlines with \n char
+map <leader>w :set wrap!<CR>|      " Toggle line wrapping
+nnoremap gV `[v`]|                 " Highlight last inserted text
+cmap w!! w !sudo tee > /dev/null % " Sudo save something
 
 " Shortcut to pretty-format ugly blocks of json
 nmap <leader>j <Esc>:%!python -m json.tool<CR><ESC>gg=G<Esc>:noh<CR>
@@ -257,6 +258,14 @@ function! RevealInFinder()
 endfunction 
 nmap <Leader>r :call RevealInFinder()<CR>
 
+" Copy complete contents of current file to clipboard
+function! CompleteCopy()
+  ! cat % | pbcopy 
+  echom "Complete file copied to clipoard!"
+endfunction
+nmap <Leader>cc :call CompleteCopy()<CR><CR><CR>
+
+
 
 " Automatically create backup/cache dirs for vim
 " in ~/.vim-tmp/
@@ -301,6 +310,7 @@ function! InitBackupDir()
   endif
 endfunction
 call InitBackupDir()
+
 " }}}
 " vim:foldmethod=marker:foldlevel=0
 

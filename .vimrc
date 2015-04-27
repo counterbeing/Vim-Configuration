@@ -150,6 +150,8 @@ map <leader>w :set wrap!<CR>|      " Toggle line wrapping
 nnoremap gV `[v`]|                 " Highlight last inserted text
 cmap w!! w !sudo tee > /dev/null % " Sudo save something
 
+vmap <C-y> :w !pbcopy<CR><CR> 
+
 " Shortcut to pretty-format ugly blocks of json
 nmap <leader>j <Esc>:%!python -m json.tool<CR><ESC>gg=G<Esc>:noh<CR>
 

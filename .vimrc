@@ -198,6 +198,7 @@ color flattown
 set background=dark         " Use dark instead of light
 
 let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
+let g:syntastic_javascript_checkers = ['eslint']
 " }}}-------------------------------------------------------------------------
 " Appearance                                                               {{{
 " ----------------------------------------------------------------------------

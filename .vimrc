@@ -78,6 +78,7 @@ set shortmess+=I " No welcome screen
 set history=200  " Remember the last 200 :ex commands
 set exrc " Allow custom vim configs in project folders
 set secure " Don't allow malicious vim configs
+set autoread
 
 
 " }}}-------------------------------------------------------------------------

@@ -39,21 +39,24 @@ Plugin 'othree/html5.vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'Keithbsmiley/rspec.vim'
 
- " Do Stuff Plugins
-Plugin 'dhruvasagar/vim-table-mode' " Easily create tables
-Plugin 'blerins/flattown'           " Simple colors
-Plugin 'bling/vim-airline'          " Fancy bar at the bottom
-Plugin 'sjl/gundo.vim'              " Show tree of undos
-Plugin 'thoughtbot/pick.vim'        " Fuzzy finder replacement
-Plugin 'tpope/vim-surround'         " For quickly changing surrounding characters
-Plugin 'scrooloose/nerdtree'        " File Browser, sometimes you need to see the tree
-Plugin 'tpope/vim-fugitive'         " Vim based git access
-Plugin 'tomtom/tcomment_vim'        " Super fast commenting (try gcc for one line)
-Plugin 'taylor/vim-zoomwin'         " Zooms in on a specific window when you have a bunch of splits
-Plugin 'godlygeek/tabular'          " Regex based indentation
-Plugin 'scrooloose/syntastic'       " Shows syntax errors in sidebar
-Plugin 'mileszs/ack.vim'            " Allows searching through many files for a specific string
-Plugin 'Yggdroot/indentLine'        " Adds vertical lines for code blocks
+" Do Stuff Plugins
+Plugin 'dhruvasagar/vim-table-mode'     " Easily create tables
+Plugin 'blerins/flattown'               " Simple colors
+Plugin 'bling/vim-airline'              " Fancy bar at the bottom
+Plugin 'sjl/gundo.vim'                  " Show tree of undos
+Plugin 'thoughtbot/pick.vim'            " Fuzzy finder replacement
+Plugin 'tpope/vim-surround'             " For quickly changing surrounding characters
+Plugin 'scrooloose/nerdtree'            " File Browser, sometimes you need to see the tree
+Plugin 'tpope/vim-fugitive'             " Vim based git access
+Plugin 'tomtom/tcomment_vim'            " Super fast commenting (try gcc for one line)
+Plugin 'taylor/vim-zoomwin'             " Zooms in on a specific window when you have a bunch of splits
+Plugin 'godlygeek/tabular'              " Regex based indentation
+Plugin 'scrooloose/syntastic'           " Shows syntax errors in sidebar
+Plugin 'mileszs/ack.vim'                " Allows searching through many files for a specific string
+Plugin 'kana/vim-textobj-user'          " Select objects defined by patterns, used by vim-textobject-ruby
+Plugin 'nelstrom/vim-textobj-rubyblock' " select rubyblocks
+Plugin 'Yggdroot/indentLine'            " Adds vertical lines for code blocks
+
 " Currently evaluating these two...
 " Plugin 'Valloric/YouCompleteMe'
 " Plugin 'SirVer/ultisnips'

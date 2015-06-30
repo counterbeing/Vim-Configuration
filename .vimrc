@@ -52,7 +52,6 @@ Plugin 'tomtom/tcomment_vim'        " Super fast commenting (try gcc for one lin
 Plugin 'taylor/vim-zoomwin'         " Zooms in on a specific window when you have a bunch of splits
 Plugin 'godlygeek/tabular'          " Regex based indentation
 Plugin 'scrooloose/syntastic'       " Shows syntax errors in sidebar
-Plugin 'marijnh/tern_for_vim'       " Interactive javascript lint, works with syntastic
 Plugin 'mileszs/ack.vim'            " Allows searching through many files for a specific string
 Plugin 'Yggdroot/indentLine'        " Adds vertical lines for code blocks
 " Currently evaluating these two...
@@ -200,6 +199,8 @@ set background=dark         " Use dark instead of light
 
 let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a variable in void context'}
+
 " }}}-------------------------------------------------------------------------
 " Appearance                                                               {{{
 " ----------------------------------------------------------------------------

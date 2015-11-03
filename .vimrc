@@ -200,8 +200,9 @@ color flattown
 " colorscheme base16-tomorrow " set color scheme
 set background=dark         " Use dark instead of light
 
-let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_ruby_checkers             = ['rubocop', 'mri']
+let g:syntastic_ruby_mri_exec             = '~/.rbenv/shims/ruby'
+let g:syntastic_javascript_checkers       = ['eslint']
 let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a variable in void context'}
 
 " }}}-------------------------------------------------------------------------

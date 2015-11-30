@@ -38,6 +38,7 @@ Plugin 'avakhov/vim-yaml'
 Plugin 'othree/html5.vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'Keithbsmiley/rspec.vim'
+Plugin 'dsawardekar/ember.vim'
 
  " Do Stuff Plugins
 Plugin 'dhruvasagar/vim-table-mode' " Easily create tables

@@ -210,8 +210,8 @@ let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a
 " Appearance                                                               {{{
 " ----------------------------------------------------------------------------
 
-let g:indentLine_noConcealCursor="" " prevent conflict in vim-json and indentLine
-hi link jsonBraces Function| " pretty blue braces instead of red
+" let g:indentLine_noConcealCursor="" " prevent conflict in vim-json and indentLine
+" hi link jsonBraces Function| " pretty blue braces instead of red
 set synmaxcol=500 " Prevent performance issues on long lines
 set nowrap        " Don't wrap lines by default
 set cursorline  " highlight cursor location

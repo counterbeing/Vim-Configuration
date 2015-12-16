@@ -76,6 +76,7 @@ let mapleader=","
 set nocompatible " enable modern features
 set hidden       " hide buffers so we don't have to write them when working on another file
 set lazyredraw   " redraw only when we need to.
+set ttyfast
 set shortmess+=I " No welcome screen
 set history=200  " Remember the last 200 :ex commands
 set exrc " Allow custom vim configs in project folders

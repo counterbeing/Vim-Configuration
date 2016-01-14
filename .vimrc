@@ -55,9 +55,10 @@ Plugin 'taylor/vim-zoomwin'             " Zooms in on a specific window when you
 Plugin 'godlygeek/tabular'              " Regex based indentation
 Plugin 'scrooloose/syntastic'           " Shows syntax errors in sidebar
 Plugin 'mileszs/ack.vim'                " Allows searching through many files for a specific string
-Plugin 'kana/vim-textobj-user'          " Select objects defined by patterns, used by vim-textobject-ruby
-Plugin 'nelstrom/vim-textobj-rubyblock' " select rubyblocks
+"Plugin 'kana/vim-textobj-user'          " Select objects defined by patterns, used by vim-textobject-ruby
+"Plugin 'nelstrom/vim-textobj-rubyblock' " select rubyblocks
 Plugin 'Yggdroot/indentLine'            " Adds vertical lines for code blocks
+Plugin 'AndrewRadev/splitjoin.vim'            " Adds vertical lines for code blocks
 
 " Currently evaluating these two...
 " Plugin 'Valloric/YouCompleteMe'
@@ -78,10 +79,11 @@ let mapleader=","
 set nocompatible " enable modern features
 set hidden       " hide buffers so we don't have to write them when working on another file
 set lazyredraw   " redraw only when we need to.
+set ttyfast
 set shortmess+=I " No welcome screen
 set history=200  " Remember the last 200 :ex commands
-set exrc " Allow custom vim configs in project folders
-set secure " Don't allow malicious vim configs
+set exrc 		 " Allow custom vim configs in project folders
+set secure 		 " Don't allow malicious vim configs
 set autoread
 
 

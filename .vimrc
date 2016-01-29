@@ -138,6 +138,11 @@ let NERDTreeIgnore = ['\.DS_Store$']
 nnoremap <Leader>t :call PickFile()<CR>| " Pick binding (an awesome fuzzy finder plugin)
 nnoremap <leader>u :GundoToggle<CR>|     " Gundo binding (ultra-undo plugin)
 
+if executable('ag')
+    " Use the silver searcher if available
+    let g:ackprg = 'ag --vimgrep'
+  endif
+
 
 " }}}-------------------------------------------------------------------------
 " Key Bindings                                                             {{{

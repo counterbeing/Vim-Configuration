@@ -29,7 +29,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'groenewege/vim-less'
 Plugin 'cakebaker/scss-syntax.vim'
@@ -45,6 +45,7 @@ Plugin 'dsawardekar/ember.vim'
 Plugin 'dhruvasagar/vim-table-mode'     " Easily create tables
 Plugin 'blerins/flattown'               " Simple colors
 Plugin 'bling/vim-airline'              " Fancy bar at the bottom
+Plugin 'vim-airline/vim-airline-themes' " Themes for airline
 Plugin 'sjl/gundo.vim'                  " Show tree of undos
 Plugin 'thoughtbot/pick.vim'            " Fuzzy finder replacement
 Plugin 'tpope/vim-surround'             " For quickly changing surrounding characters

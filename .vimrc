@@ -40,6 +40,7 @@ Plugin 'othree/html5.vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'Keithbsmiley/rspec.vim'
 Plugin 'dsawardekar/ember.vim'
+Plugin 'airblade/vim-gitgutter'
 
 " Do Stuff Plugins
 Plugin 'dhruvasagar/vim-table-mode'     " Easily create tables
@@ -237,6 +238,7 @@ let g:pasteMode = 0
 function PasteToggle()
   if g:pasteMode
     IndentLinesEnable
+    GitGutterEnable
     set nopaste
     set nowrap
     set number
@@ -248,6 +250,7 @@ function PasteToggle()
     echom "Paste mode OFF!"
   else
     IndentLinesDisable
+    GitGutterDisable
     set mouse=""
     set paste
     set wrap

@@ -38,7 +38,22 @@ Here's a cheatsheet of handy things, for reference.
 
 ## Custom Script
 ### Visual Mode
-- `,p` Paste mode removes line numbers, and vertical alignment lines for easy system copying.
-- `,r` Reveals a particular file in the finder.
-- `,j` Pretty formats selected json.
--  `CTRL-y` Yanks selected text to system clipboard.
+
+| Command  | Result                                                                                 |
+|----------|----------------------------------------------------------------------------------------|
+| `,p`     | Paste mode removes line numbers, and vertical alignment lines for easy system copying. |
+| `,r`     | Reveals a particular file in the finder.                                               |
+| `,j`     | Pretty formats selected json.                                                          |
+| `CTRL-y` | Yanks selected text to system clipboard.                                               |
+
+## General Vim Reminders
+
+Some of my favorite and most used shortcuts.
+
+### Tab Navigation
+
+| command    | result                       |
+|------------|------------------------------|
+| `:tabnew`  | Make a new tab               |
+| `gt`       | Toggle between tabs          |
+| \<ctrl\> w T | Open current file in new tab |

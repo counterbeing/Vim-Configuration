@@ -52,8 +52,18 @@ Some of my favorite and most used shortcuts.
 
 ### Tab Navigation
 
-| command    | result                       |
-|------------|------------------------------|
-| `:tabnew`  | Make a new tab               |
-| `gt`       | Toggle between tabs          |
-| \<ctrl\> w T | Open current file in new tab |
+| command      | result                       |
+|--------------|------------------------------|
+| `:tabnew`    | Make a new tab               |
+| `gt`         | Toggle between tabs          |
+| `<ctrl> w T` | Open current file in new tab |
+
+### Folding
+
+| command   | result                                  |
+|-----------|-----------------------------------------|
+| `<space>` | Toggles a code block of folding.        |
+| `zW`      | Fold everything in a file               |
+| `zw`      | Fold everything at a particular level   |
+| `zR`      | Unfold everything in a file             |
+| `zr`      | Unfold everything at a particular level |

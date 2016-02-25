@@ -34,6 +34,14 @@ Here's a cheatsheet of handy things, for reference.
 ### Gundo
 
 ### TComment
+| command | result                                      |
+|---------+---------------------------------------------|
+| `gcc`   | Toggles the commenting of a block on or off |
+
+### TableMode
+| command | result                        |
+|---------+-------------------------------|
+| `,tm`   | Toggles table mode on or off. |
 
 
 ## Custom Script

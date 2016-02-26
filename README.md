@@ -35,12 +35,12 @@ Here's a cheatsheet of handy things, for reference.
 
 ### TComment
 | command | result                                      |
-|---------+---------------------------------------------|
+|---------|---------------------------------------------|
 | `gcc`   | Toggles the commenting of a block on or off |
 
 ### TableMode
 | command | result                        |
-|---------+-------------------------------|
+|---------|-------------------------------|
 | `,tm`   | Toggles table mode on or off. |
 
 

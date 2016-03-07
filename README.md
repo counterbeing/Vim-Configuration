@@ -75,3 +75,18 @@ Some of my favorite and most used shortcuts.
 | `zw`      | Fold everything at a particular level   |
 | `zR`      | Unfold everything in a file             |
 | `zr`      | Unfold everything at a particular level |
+
+### Splits and Tabs
+
+
+### Sessions
+
+Sessions are a quick way of saving window layouts, including spits, tabs, and even even set variables. I use it in a very simple way, which is just to output a `Session.vim` file in the current directory. I often need to drop what I'm working on to check out something on another git branch, which can cause issues with which files I want open. Usually I have things arranged in such a way that I have tests in one tab, and related code in another, or test/code pairs in each tab. It just depends on what I'm working on. With sessions, I can quickly save the state of the windows I was working on.
+
+| command                | result                                                       |
+|------------------------|--------------------------------------------------------------|
+| `:mks` or `:mksession` | makes a simple `Session.vim` file in the current directory.  |
+| `:mks file_path.vim`   | Makes the session file where you tell it.                    |
+| `:mks!`                | Same as above except forces overwrite.                       |
+| `$ vim -S Session.vim` | Open a VIM session file and open all of the tabs and splits. |
+

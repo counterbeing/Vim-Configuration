@@ -57,10 +57,12 @@ Plugin 'taylor/vim-zoomwin'             " Zooms in on a specific window when you
 Plugin 'godlygeek/tabular'              " Regex based indentation
 Plugin 'scrooloose/syntastic'           " Shows syntax errors in sidebar
 Plugin 'mileszs/ack.vim'                " Allows searching through many files for a specific string
-"Plugin 'kana/vim-textobj-user'          " Select objects defined by patterns, used by vim-textobject-ruby
-"Plugin 'nelstrom/vim-textobj-rubyblock' " select rubyblocks
+Plugin 'AndrewRadev/splitjoin.vim'      " Auto-format code on single or multi lines
+" Plugin 'nathanaelkane/vim-indent-guides' " Auto-format code on single or multi lines
+" Plugin 'kana/vim-textobj-user'          " Select objects defined by patterns, used by vim-textobject-ruby
+" Plugin 'nelstrom/vim-textobj-rubyblock' " select rubyblocks
 Plugin 'Yggdroot/indentLine'            " Adds vertical lines for code blocks
-Plugin 'AndrewRadev/splitjoin.vim'            " Adds vertical lines for code blocks
+
 
 " Currently evaluating these two...
 " Plugin 'Valloric/YouCompleteMe'

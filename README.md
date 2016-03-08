@@ -39,10 +39,26 @@ Here's a cheatsheet of handy things, for reference.
 | `gcc`   | Toggles the commenting of a block on or off |
 
 ### TableMode
+
+https://github.com/dhruvasagar/vim-table-mode
+
+There are a few minor tweaks to make this work a bit more naturally with markdown, as that's what I use it for primarily.
+
 | command | result                        |
 |---------|-------------------------------|
 | `,tm`   | Toggles table mode on or off. |
 
+
+### GitGutter
+
+https://github.com/airblade/vim-gitgutter
+
+This offers some great integration for git, showing the current status of changes in a file. It really helps you remember what you were working on, and be aware of what changes you've made. Even more cool. If you were workig on two different changes by mistake, you can easily stage just some of them for commiting.
+
+| Command | Result                  |
+|---------|-------------------------|
+| `,hs`   | Stage a hunk for commit |
+| `,hu`   | Unstage a hunk          |
 
 ## Custom Script
 ### Visual Mode

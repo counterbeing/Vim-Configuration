@@ -98,6 +98,16 @@ Some of my favorite and most used shortcuts.
 
 ### Splits and Tabs
 
+Super useful feature of vim for laying out different files next to each other, so that you can see everything you want to see at one time.
+
+| command   | result                                                                                                                  |
+|-----------|-------------------------------------------------------------------------------------------------------------------------|
+| `:vsp`    | Creates a vertical split                                                                                                |
+| `:sp`     | Creates a horizontal split                                                                                              |
+| `:tabnew` | Creates a new tab                                                                                                       |
+| `^w h`    | Move left to different window, in a split scenario. This also works with all of the direction keys `h`, `j`, `k` or `l` |
+| `:tabnew` | Creates a new tab                                                                                                       |
+| `gt`      | Toggle to next tab                                                                                                      |
 
 ### Sessions
 

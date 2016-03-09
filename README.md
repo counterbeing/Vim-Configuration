@@ -33,7 +33,12 @@ Here's a cheatsheet of handy things, for reference.
 
 https://github.com/tpope/vim-fugitive
 
-Git integration within VIM. I know I really don't use this enough.
+Git integration within VIM. I know I really don't use this enough. I use this plugin in a few key ways, so I will outline them in workflows.
+
+#### Making changes, and commiting them.
+After making changes to a file, you can use `:Gstatus` to stage files for commit. A list will pop up, and you can select from the list of unstaged file by hitting the `-`  key. Each time you do this, a file will be staged for commit. You can move them the other way as well. Then, in the same window you can use `:Gcommit` to commit and write a message. Here's a video demo. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AsKGOeonbIs?start=445&end=556&version=3" frameborder="0" allowfullscreen=""></iframe>
 
 ### Gundo
 

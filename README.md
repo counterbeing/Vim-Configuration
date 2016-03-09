@@ -1,6 +1,8 @@
 # A Solid Vim Configuration
 This is an ever evolving VIM config, which incorperates several plugins, color schemes, and custom functions. The `.vimrc` if heavily commented, and there are a few notes in this file, about some of the handier plugins and quicktips.
 
+Part of the beauty of vim is how modular and configurable it is. I invite you to use this repo as a starting point, or a guide for your own. This is also very handy as a place to sync such information between machines. Pretty much any machine I work on can be quickly bootstrapped to have a text editor that I know and love up and running in seconds. It's magic. 
+
 I also recommend you check out the my [dotfiles repo](https://github.com/counterbeing/.dotfiles) as it includes some binaries that this depends on like, `ack`, `pick`, and `eshint`. If you use that repo, it will include this one, and you can skip installation.
 
 ## Installation

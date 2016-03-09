@@ -31,6 +31,10 @@ Here's a cheatsheet of handy things, for reference.
 
 ### Fugitive
 
+https://github.com/tpope/vim-fugitive
+
+Git integration within VIM. I know I really don't use this enough.
+
 ### Gundo
 
 ### TComment

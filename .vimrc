@@ -39,7 +39,6 @@ Plugin 'avakhov/vim-yaml'
 Plugin 'othree/html5.vim'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'Keithbsmiley/rspec.vim'
-Plugin 'dsawardekar/ember.vim'
 Plugin 'airblade/vim-gitgutter'
 
 " Do Stuff Plugins

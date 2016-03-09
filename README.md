@@ -40,7 +40,6 @@ Git integration within VIM. I know I really don't use this enough. I use this pl
 #### Making changes, and commiting them.
 After making changes to a file, you can use `:Gstatus` to stage files for commit. A list will pop up, and you can select from the list of unstaged file by hitting the `-`  key. Each time you do this, a file will be staged for commit. You can move them the other way as well. Then, in the same window you can use `:Gcommit` to commit and write a message, `:wq` and you're done. Here's a video demo. 
 
-[![asciicast](https://asciinema.org/a/6ko5vf3czc8hvobhn57m0g6dw.png)](https://asciinema.org/a/6ko5vf3czc8hvobhn57m0g6dw)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AsKGOeonbIs?start=445&end=556&version=3" frameborder="0" allowfullscreen=""></iframe>
 

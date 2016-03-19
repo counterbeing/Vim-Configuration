@@ -23,8 +23,7 @@ Create a symlink in your homedir from .vimrc to the .vimrc inside this .vim
 ### Run The Script To Grab All Vim Bundles
 ```
 cd .vim
-git clone https://github.com/gmarik/Vundle.vim.git bundle/Vundle.vim
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 ```
 
 ## Featured Plugins

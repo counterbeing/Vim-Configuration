@@ -9,77 +9,17 @@
 " This .vimrc file uses folding to manage the display of its contents.
 " Use the 'zR' command to open all of the sections if you're lost...
 " ----------------------------------------------------------------------------
-" Vundle                                                                   {{{
+" Plug                                                                     {{{
 " ----------------------------------------------------------------------------
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'            " Required for vundle
-Plugin 'tpope/vim-liquid'
-Plugin 'pangloss/vim-javascript'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'burnettk/vim-angular'
-Plugin 'briancollins/vim-jst'
-Plugin 'elzr/vim-json'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'tpope/vim-haml'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'tpope/vim-rails'
-Plugin 'groenewege/vim-less'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'ap/vim-css-color'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'avakhov/vim-yaml'
-Plugin 'othree/html5.vim'
-Plugin 'Glench/Vim-Jinja2-Syntax'
-Plugin 'Keithbsmiley/rspec.vim'
-Plugin 'airblade/vim-gitgutter'
-
-" Do Stuff Plugins
-Plugin 'dhruvasagar/vim-table-mode'     " Easily create tables
-Plugin 'blerins/flattown'               " Simple colors
-Plugin 'bling/vim-airline'              " Fancy bar at the bottom
-Plugin 'vim-airline/vim-airline-themes' " Themes for airline
-Plugin 'sjl/gundo.vim'                  " Show tree of undos
-Plugin 'thoughtbot/pick.vim'            " Fuzzy finder replacement
-Plugin 'tpope/vim-surround'             " For quickly changing surrounding characters
-Plugin 'scrooloose/nerdtree'            " File Browser, sometimes you need to see the tree
-Plugin 'tpope/vim-fugitive'             " Vim based git access
-Plugin 'tomtom/tcomment_vim'            " Super fast commenting (try gcc for one line)
-Plugin 'taylor/vim-zoomwin'             " Zooms in on a specific window when you have a bunch of splits
-Plugin 'godlygeek/tabular'              " Regex based indentation
-Plugin 'scrooloose/syntastic'           " Shows syntax errors in sidebar
-Plugin 'mileszs/ack.vim'                " Allows searching through many files for a specific string
-Plugin 'AndrewRadev/splitjoin.vim'      " Auto-format code on single or multi lines
-" Plugin 'nathanaelkane/vim-indent-guides' " Auto-format code on single or multi lines
-" Plugin 'kana/vim-textobj-user'          " Select objects defined by patterns, used by vim-textobject-ruby
-" Plugin 'nelstrom/vim-textobj-rubyblock' " select rubyblocks
-Plugin 'Yggdroot/indentLine'            " Adds vertical lines for code blocks
-
-
-" Currently evaluating these two...
-" Plugin 'Valloric/YouCompleteMe'
-" Plugin 'SirVer/ultisnips'
-
-call vundle#end()            " required
-filetype plugin indent on    " required
-
 " }}}-------------------------------------------------------------------------
 " Base                                                                     {{{
 " ----------------------------------------------------------------------------
 
-" Set up Pathogen Bundle Mangement
-" call pathogen#infect()
-" call pathogen#helptags()
-
+set nocompatible              " be iMproved, required
+source $HOME/.vim/plug.vim "load plugins
+filetype off                  " required
+filetype plugin indent on    " required
 let mapleader=","
-set nocompatible " enable modern features
 set hidden       " hide buffers so we don't have to write them when working on another file
 set lazyredraw   " redraw only when we need to.
 set ttyfast

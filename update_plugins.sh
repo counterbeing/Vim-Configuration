@@ -15,5 +15,4 @@ vim +PlugUpgrade +PlugUpdate +"PlugSnapshot! ~/.vim/plug_snapshots/${timestamp}_
 # the `command` keyword allows us to run `ls` without any of the flags
 # that might be aliased into the default.
 
-# cd "${snapshot_dir}"; command ls -tr | head -n 9 | xargs rm
 cd "${snapshot_dir}"; (command ls -t | head -n 5; command ls) | sort | uniq -u | xargs rm

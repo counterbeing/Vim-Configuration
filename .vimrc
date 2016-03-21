@@ -15,19 +15,20 @@
 " Base                                                                     {{{
 " ----------------------------------------------------------------------------
 
-set nocompatible              " be iMproved, required
-source $HOME/.vim/plug.vim "load plugins
-filetype off                  " required
-filetype plugin indent on    " required
-let mapleader=","
-set hidden       " hide buffers so we don't have to write them when working on another file
-set lazyredraw   " redraw only when we need to.
+set nocompatible           " be iMproved, required
+source $HOME/.vim/plug.vim " load plugins
+filetype off               " required
+filetype plugin indent on  " required
+let mapleader=","          " Set leader key to ','
+set hidden                 " hide buffers so we don't have to write them when working on another file
+set lazyredraw             " redraw only when we need to.
 set ttyfast
-set shortmess+=I " No welcome screen
-set history=200  " Remember the last 200 :ex commands
-set exrc 		 " Allow custom vim configs in project folders
-set secure 		 " Don't allow malicious vim configs
+set shortmess+=I           " No welcome screen
+set history=200            " Remember the last 200 :ex commands
+set exrc                   " Allow custom vim configs in project folders
+set secure                 " Don't allow malicious vim configs
 set autoread
+set re=1                   " Use old regex engine, faster for ruby syntax
 
 
 " }}}-------------------------------------------------------------------------
@@ -152,6 +153,7 @@ color flattown
 " colorscheme base16-tomorrow " set color scheme
 set background=dark         " Use dark instead of light
 
+let g:ruby_path                           = '~/.rbenv/shims/ruby'
 let g:syntastic_ruby_checkers             = ['rubocop', 'mri']
 let g:syntastic_ruby_mri_exec             = '~/.rbenv/shims/ruby'
 let g:syntastic_javascript_checkers       = ['eslint']

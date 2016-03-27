@@ -3,3 +3,4 @@ backup/*
 tmp
 .netrwhist
 plugged/*
+autoload/plug*

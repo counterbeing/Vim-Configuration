@@ -111,6 +111,10 @@ vmap <C-y> :w !pbcopy<CR><CR>
 " Shortcut to pretty-format ugly blocks of json
 nmap <leader>j <Esc>:%!python -m json.tool<CR><ESC>gg=G<Esc>:noh<CR>
 
+" Finding and replacing interactively using over-vim, thanks toranb
+nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
+xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
+
 " }}}-------------------------------------------------------------------------
 " Folding                                                                  {{{
 " ----------------------------------------------------------------------------
@@ -280,6 +284,15 @@ function! InitBackupDir()
   endif
 endfunction
 call InitBackupDir()
+
+function! VisualFindAndReplace()
+  :OverCommandLine%s/
+  :w
+endfunction
+function! VisualFindAndReplaceWithSelection() range
+  :'<,'>OverCommandLine s/
+  :w
+endfunction
 
 " }}}
 " vim:foldmethod=marker:foldlevel=0

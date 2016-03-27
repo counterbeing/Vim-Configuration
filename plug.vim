@@ -45,6 +45,7 @@ Plug 'scrooloose/syntastic'                             " Shows syntax errors in
 Plug 'mileszs/ack.vim'                                  " Allows searching through many files for a specific string
 Plug 'AndrewRadev/splitjoin.vim'                        " Auto-format code on single or multi lines
 Plug 'Yggdroot/indentLine'                              " Adds vertical lines for code blocks
+Plug 'osyo-manga/vim-over'                              " Live preview for search and replace
 
 
 filetype plugin indent on                               " required!

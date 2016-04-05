@@ -72,6 +72,18 @@ This offers some great integration for git, showing the current status of change
 | `,hs`   | Stage a hunk for commit |
 | `,hu`   | Unstage a hunk          |
 
+
+### SplitJoin
+
+https://github.com/AndrewRadev/splitjoin.vim
+
+Sometimes in any language you want to break a statement up into multiple lines as it gets too long to be easily readable. This great little plugin helps you do most of the dirty work without thinking about it. My only gripe at the moment is that it still prefers the older Ruby hash syntax. But, it's great, take it for a spin.
+
+| Command | Result                                                          |
+|---------|-----------------------------------------------------------------|
+| `gS`    | Split a one line into multiple lines.                           |
+| `gJ`    | Merge a multi line hash or method or whatnot into a single line |
+
 ## Custom Script
 ### Visual Mode
 

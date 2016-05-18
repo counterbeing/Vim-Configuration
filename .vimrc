@@ -145,6 +145,8 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 " Color & Syntax                                                           {{{
 " ----------------------------------------------------------------------------
 
+
+
 syntax on                   " enable file syntax highlighting
 
 if &term == "screen"
@@ -153,9 +155,10 @@ endif
 
 " Base16 plugin options
 let base16colorspace=256    " Enable 256 color mode
-color flattown
-" colorscheme base16-tomorrow " set color scheme
+" colorscheme base16-default
+" color flattown
 set background=dark         " Use dark instead of light
+colorscheme hybrid
 
 let g:ruby_path                           = '~/.rbenv/shims/ruby'
 let g:syntastic_ruby_checkers             = ['rubocop', 'mri']

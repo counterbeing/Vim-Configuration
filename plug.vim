@@ -30,7 +30,6 @@ Plug 'airblade/vim-gitgutter'
 
 " Do Stuff Plugins
 Plug 'dhruvasagar/vim-table-mode'                       " Easily create tables
-Plug 'blerins/flattown'                                 " Simple colors
 Plug 'bling/vim-airline'                                " Fancy bar at the bottom
 Plug 'vim-airline/vim-airline-themes'                   " Themes for airline
 Plug 'sjl/gundo.vim'                                    " Show tree of undos
@@ -47,6 +46,10 @@ Plug 'AndrewRadev/splitjoin.vim'                        " Auto-format code on si
 Plug 'Yggdroot/indentLine'                              " Adds vertical lines for code blocks
 Plug 'osyo-manga/vim-over'                              " Live preview for search and replace
 
+" Color Schemes
+Plug 'blerins/flattown'                                 " Simple colors
+Plug 'scwood/vim-hybrid'
+Plug 'chriskempson/base16-vim'
 
 filetype plugin indent on                               " required!
 call plug#end()

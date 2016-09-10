@@ -118,6 +118,8 @@ nmap <leader>j <Esc>:%!python -m json.tool<CR><ESC>gg=G<Esc>:noh<CR>
 nnoremap <Leader>fr :call VisualFindAndReplace()<CR>
 xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
 
+map <leader>R :call RunRubocop()<CR>
+
 " }}}-------------------------------------------------------------------------
 " Folding                                                                  {{{
 " ----------------------------------------------------------------------------
@@ -166,7 +168,6 @@ colorscheme hybrid
 let g:ruby_path                           = '~/.rbenv/shims/ruby'
 let g:syntastic_ruby_checkers             = ['rubocop', 'mri']
 
-map <leader>R :!NO_BUNDLE_EXEC=1 rubocop -a ./% <cr>
 let g:syntastic_ruby_mri_exec             = '~/.rbenv/shims/ruby'
 let g:syntastic_javascript_checkers       = ['eslint']
 let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a variable in void context'}
@@ -203,8 +204,8 @@ function! CopySpecCommand()
   let l:lineNumber = line('.')
   let l:filePath = expand('%')
   let l:fullPath =  "rspec " . "./" . l:filePath .  ":" . l:lineNumber
-  execute '!echo ' . l:fullPath . " | pbcopy"
-  normal <CR><CR>
+  execute ':silent !echo ' . l:fullPath . " | pbcopy"
+  redraw!
   echo "Spec command copied to clipboard!"
 endfunction
 
@@ -317,6 +318,11 @@ endfunction
 function! VisualFindAndReplaceWithSelection() range
   :'<,'>OverCommandLine s/
   :w
+endfunction
+
+function! RunRubocop()
+  execute ":silent !NO_BUNDLE_EXEC=1 rubocop -f s -Ra ./%"
+  redraw!
 endfunction
 
 " }}}

@@ -29,6 +29,7 @@ set exrc                   " Allow custom vim configs in project folders
 set secure                 " Don't allow malicious vim configs
 set autoread
 set re=1                   " Use old regex engine, faster for ruby syntax
+set visualbell             " Sweet silence
 
 
 " }}}-------------------------------------------------------------------------
@@ -77,10 +78,12 @@ set incsearch                  " move cursor to matched string while typing patt
 
 " Nerd Tree binding and plugin options
 map <leader>n :NERDTreeToggle <Return>
+nmap <leader>nn :NERDTreeFind<CR>
 let NERDTreeDirArrows=0
 let NERDTreeIgnore = ['\.DS_Store$']
 
 nnoremap <Leader>t :call PickFile()<CR>| " Pick binding (an awesome fuzzy finder plugin)
+nnoremap <Leader>T :call PickBuffer()<CR>| 
 nnoremap <leader>u :GundoToggle<CR>|     " Gundo binding (ultra-undo plugin)
 
 if executable('ag')
@@ -162,6 +165,8 @@ colorscheme hybrid
 
 let g:ruby_path                           = '~/.rbenv/shims/ruby'
 let g:syntastic_ruby_checkers             = ['rubocop', 'mri']
+
+map <leader>R :!NO_BUNDLE_EXEC=1 rubocop -a ./% <cr>
 let g:syntastic_ruby_mri_exec             = '~/.rbenv/shims/ruby'
 let g:syntastic_javascript_checkers       = ['eslint']
 let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a variable in void context'}
@@ -186,11 +191,29 @@ let g:table_mode_corner="|"
 " Custom Functions                                                         {{{
 " ----------------------------------------------------------------------------
 
+" Copy current file path to clipboard
+map <leader>f :!echo -n "%" \| pbcopy <CR>
+
+" Copy spec command of current line in file
+" This makes the full spec command on your behalf, and puts it on the system
+" clipboard for you to call wherever you like. Using relative paths allows
+" this to work when your rails app is running in some kind of container.
+map <leader>s :call CopySpecCommand() <CR>
+function! CopySpecCommand()
+  let l:lineNumber = line('.')
+  let l:filePath = expand('%')
+  let l:fullPath =  "rspec " . "./" . l:filePath .  ":" . l:lineNumber
+  execute '!echo ' . l:fullPath . " | pbcopy"
+  normal <CR><CR>
+  echo "Spec command copied to clipboard!"
+endfunction
+
+
 " Paste Toggle
 " The following sets a variable to keep track of paste mode, and turns
 " both paste mode and insert lines on and off for copying and pasting
 let g:pasteMode = 0
-function PasteToggle()
+function! PasteToggle()
   if g:pasteMode
     IndentLinesEnable
     GitGutterEnable
@@ -215,10 +238,8 @@ function PasteToggle()
     echom "Paste mode ON!"
   endif
 endfunction
+
 map <leader>p :call PasteToggle()<cr>
-
-
-
 
 " Reveal files in the finder
 function! RevealInFinder()
@@ -292,6 +313,7 @@ function! VisualFindAndReplace()
   :OverCommandLine%s/
   :w
 endfunction
+
 function! VisualFindAndReplaceWithSelection() range
   :'<,'>OverCommandLine s/
   :w

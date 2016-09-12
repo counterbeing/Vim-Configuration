@@ -194,7 +194,7 @@ set number      " show line numbers
 " ----------------------------------------------------------------------------
 let g:table_mode_corner="|"
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:UltiSnipsExpandTrigger="<cr>"
+let g:UltiSnipsExpandTrigger="<tab><tab>"
 
 " }}}-------------------------------------------------------------------------
 " Custom Functions                                                         {{{

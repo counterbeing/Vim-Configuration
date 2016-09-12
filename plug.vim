@@ -47,7 +47,9 @@ Plug 'AndrewRadev/splitjoin.vim'                        " Auto-format code on si
 Plug 'Yggdroot/indentLine'                              " Adds vertical lines for code blocks
 Plug 'osyo-manga/vim-over'                              " Live preview for search and replace
 Plug 'jgdavey/vim-blockle'                              " Convert block formats
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' } " Advanced autocomplete
+Plug 'SirVer/ultisnips'                                 " Snippets loader
+Plug 'honza/vim-snippets'                               " Predefined snippets
 
 " Color Schemes
 Plug 'blerins/flattown'                                 " Simple colors

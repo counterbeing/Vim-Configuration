@@ -120,7 +120,7 @@ map <leader>R :call RunRubocop()<CR>
 
 " Copy current file path to clipboard
 map <leader>s :call CopySpecCommand() <CR>
-map <leader>f :!echo -n "%" \| pbcopy <CR>
+map <leader>f :call CopyFilePath()<CR>
 map <leader>p :call PasteToggle()<cr>
 nmap <Leader>r :call RevealInFinder()<CR>
 nmap <Leader>ct :call RegenerateCtagsForYCM()<CR>
@@ -194,10 +194,18 @@ set number      " show line numbers
 " ----------------------------------------------------------------------------
 let g:table_mode_corner="|"
 let g:ycm_collect_identifiers_from_tags_files = 1
+let g:UltiSnipsExpandTrigger="<cr>"
 
 " }}}-------------------------------------------------------------------------
 " Custom Functions                                                         {{{
 " ----------------------------------------------------------------------------
+
+function! CopyFilePath()
+  let l:filePath = expand('%')
+  execute ':silent !echo ' . l:filePath . " | pbcopy"
+  redraw!
+  echo "Path to file copied to clipboard!"
+endfunction
 
 " Copy spec command of current line in file
 " This makes the full spec command on your behalf, and puts it on the system

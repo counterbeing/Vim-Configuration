@@ -9,9 +9,6 @@
 " This .vimrc file uses folding to manage the display of its contents.
 " Use the 'zR' command to open all of the sections if you're lost...
 " ----------------------------------------------------------------------------
-" Plug                                                                     {{{
-" ----------------------------------------------------------------------------
-" }}}-------------------------------------------------------------------------
 " Base                                                                     {{{
 " ----------------------------------------------------------------------------
 
@@ -30,6 +27,7 @@ set secure                 " Don't allow malicious vim configs
 set autoread
 set re=1                   " Use old regex engine, faster for ruby syntax
 set visualbell             " Sweet silence
+set timeoutlen=300 ttimeoutlen=10
 
 
 " }}}-------------------------------------------------------------------------
@@ -120,6 +118,14 @@ xnoremap <Leader>fr :call VisualFindAndReplaceWithSelection()<CR>
 
 map <leader>R :call RunRubocop()<CR>
 
+" Copy current file path to clipboard
+map <leader>s :call CopySpecCommand() <CR>
+map <leader>f :!echo -n "%" \| pbcopy <CR>
+map <leader>p :call PasteToggle()<cr>
+nmap <Leader>r :call RevealInFinder()<CR>
+nmap <Leader>ct :call RegenerateCtagsForYCM()<CR>
+nmap <Leader>cc :call CompleteCopyFile()<CR><CR><CR>
+
 " }}}-------------------------------------------------------------------------
 " Folding                                                                  {{{
 " ----------------------------------------------------------------------------
@@ -187,19 +193,16 @@ set number      " show line numbers
 " Plugin Configuration                                                     {{{
 " ----------------------------------------------------------------------------
 let g:table_mode_corner="|"
+let g:ycm_collect_identifiers_from_tags_files = 1
 
 " }}}-------------------------------------------------------------------------
 " Custom Functions                                                         {{{
 " ----------------------------------------------------------------------------
 
-" Copy current file path to clipboard
-map <leader>f :!echo -n "%" \| pbcopy <CR>
-
 " Copy spec command of current line in file
 " This makes the full spec command on your behalf, and puts it on the system
 " clipboard for you to call wherever you like. Using relative paths allows
 " this to work when your rails app is running in some kind of container.
-map <leader>s :call CopySpecCommand() <CR>
 function! CopySpecCommand()
   let l:lineNumber = line('.')
   let l:filePath = expand('%')
@@ -240,8 +243,6 @@ function! PasteToggle()
   endif
 endfunction
 
-map <leader>p :call PasteToggle()<cr>
-
 " Reveal files in the finder
 function! RevealInFinder()
   if filereadable(expand("%"))
@@ -255,16 +256,12 @@ function! RevealInFinder()
  " For terminal Vim not to look messed up.
  redraw!
 endfunction 
-nmap <Leader>r :call RevealInFinder()<CR>
 
 " Copy complete contents of current file to clipboard
-function! CompleteCopy()
+function! CompleteCopyFile()
   ! cat % | pbcopy 
   echom "Complete file copied to clipoard!"
 endfunction
-nmap <Leader>cc :call CompleteCopy()<CR><CR><CR>
-
-
 
 " Automatically create backup/cache dirs for vim
 " in ~/.vim-tmp/
@@ -323,6 +320,12 @@ endfunction
 function! RunRubocop()
   execute ":silent !NO_BUNDLE_EXEC=1 rubocop -f s -Ra ./%"
   redraw!
+endfunction
+
+function! RegenerateCtagsForYCM()
+  execute ":silent !ctags -R -f ./.tags --fields=+l"
+  redraw!
+  echo "Regenerated ctags in .tags"
 endfunction
 
 " }}}

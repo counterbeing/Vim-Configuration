@@ -6,6 +6,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+"Syntax and such
 Plug 'tpope/vim-liquid'
 Plug 'pangloss/vim-javascript'
 Plug 'othree/javascript-libraries-syntax.vim'
@@ -28,14 +29,14 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'Keithbsmiley/rspec.vim'
 Plug 'airblade/vim-gitgutter'
 
-" Do Stuff Plugins
+"Do Stuff Plugins
 Plug 'dhruvasagar/vim-table-mode'                       " Easily create tables
 Plug 'bling/vim-airline'                                " Fancy bar at the bottom
 Plug 'vim-airline/vim-airline-themes'                   " Themes for airline
 Plug 'sjl/gundo.vim'                                    " Show tree of undos
 Plug 'thoughtbot/pick.vim'                              " Fuzzy finder replacement
 Plug 'tpope/vim-surround'                               " For quickly changing surrounding characters
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " File Browser, sometimes you need to see the tree
+Plug 'scrooloose/nerdtree'                              " File Browser, sometimes you need to see the tree
 Plug 'tpope/vim-fugitive'                               " Vim based git access
 Plug 'tomtom/tcomment_vim'                              " Super fast commenting (try gcc for one line)
 Plug 'taylor/vim-zoomwin'                               " Zooms in on a specific window when you have a bunch of splits
@@ -45,6 +46,8 @@ Plug 'mileszs/ack.vim'                                  " Allows searching throu
 Plug 'AndrewRadev/splitjoin.vim'                        " Auto-format code on single or multi lines
 Plug 'Yggdroot/indentLine'                              " Adds vertical lines for code blocks
 Plug 'osyo-manga/vim-over'                              " Live preview for search and replace
+Plug 'jgdavey/vim-blockle'                              " Convert block formats
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " Color Schemes
 Plug 'blerins/flattown'                                 " Simple colors

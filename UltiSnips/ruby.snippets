@@ -2,3 +2,9 @@ snippet tpry "tap binding.pry"
 .tap{ |res| binding.pry }
 endsnippet
 
+snippet "\b(de)?f" "def <name>..." r
+def ${1:method_name}${2:(${3:*args})}
+	$0
+end
+endsnippet
+

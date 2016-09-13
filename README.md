@@ -1,10 +1,19 @@
 # A Solid Vim Configuration
 
-This is an ever evolving VIM config, which incorperates several plugins, color schemes, and custom functions. The `.vimrc` if heavily commented, and there are a few notes in this file, about some of the handier plugins and quicktips.
+This is an ever evolving VIM config, which incorperates several plugins, color
+schemes, and custom functions. The `.vimrc` if heavily commented, and there are
+a few notes in this file, about some of the handier plugins and quicktips.
 
-Part of the beauty of vim is how modular and configurable it is. I invite you to use this repo as a starting point, or a guide for your own. This is also very handy as a place to sync such information between machines. Pretty much any machine I work on can be quickly bootstrapped to have a text editor that I know and love up and running in seconds. It's magic. 
+Part of the beauty of vim is how modular and configurable it is. I invite you
+to use this repo as a starting point, or a guide for your own. This is also
+very handy as a place to sync such information between machines. Pretty much
+any machine I work on can be quickly bootstrapped to have a text editor that I
+know and love up and running in seconds. It's magic. 
 
-I also recommend you check out the my [dotfiles repo](https://github.com/counterbeing/.dotfiles) as it includes some binaries that this depends on like, `ack`, `pick`, and `eshint`. If you use that repo, it will include this one, and you can skip installation.
+I also recommend you check out the my [dotfiles
+repo](https://github.com/counterbeing/.dotfiles) as it includes some binaries
+that this depends on like, `ack`, `pick`, and `eshint`. If you use that repo,
+it will include this one, and you can skip installation.
 
 ## Installation
 
@@ -27,7 +36,9 @@ vim +PlugInstall +qall
 ```
 
 ## Featured Plugins
-There are many great plugins out there, and many of them depend on what you're trying to do with vim. This is my own personal selecition, but would probably be a good starting point if you're working in Ruby and/or JavaScript.
+There are many great plugins out there, and many of them depend on what you're
+trying to do with vim. This is my own personal selecition, but would probably
+be a good starting point if you're working in Ruby and/or JavaScript.
 
 Here's a cheatsheet of handy things, for reference.
 
@@ -35,10 +46,16 @@ Here's a cheatsheet of handy things, for reference.
 
 https://github.com/tpope/vim-fugitive
 
-Git integration within VIM. I know I really don't use this enough. I use this plugin in a few key ways, so I will outline them in workflows.
+Git integration within VIM. I know I really don't use this enough. I use this
+plugin in a few key ways, so I will outline them in workflows.
 
 #### Making changes, and commiting them.
-After making changes to a file, you can use `:Gstatus` to stage files for commit. A list will pop up, and you can select from the list of unstaged file by hitting the `-`  key. Each time you do this, a file will be staged for commit. You can move them the other way as well. Then, in the same window you can use `:Gcommit` to commit and write a message, `:wq` and you're done. Here's a video demo. 
+After making changes to a file, you can use `:Gstatus` to stage files for
+commit. A list will pop up, and you can select from the list of unstaged file
+by hitting the `-`  key. Each time you do this, a file will be staged for
+commit. You can move them the other way as well. Then, in the same window you
+can use `:Gcommit` to commit and write a message, `:wq` and you're done. Here's
+a video demo. 
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AsKGOeonbIs?start=445&end=556&version=3" frameborder="0" allowfullscreen=""></iframe>
@@ -54,7 +71,8 @@ After making changes to a file, you can use `:Gstatus` to stage files for commit
 
 https://github.com/dhruvasagar/vim-table-mode
 
-There are a few minor tweaks to make this work a bit more naturally with markdown, as that's what I use it for primarily.
+There are a few minor tweaks to make this work a bit more naturally with
+markdown, as that's what I use it for primarily.
 
 | command | result                        |
 |---------|-------------------------------|
@@ -65,7 +83,11 @@ There are a few minor tweaks to make this work a bit more naturally with markdow
 
 https://github.com/airblade/vim-gitgutter
 
-This offers some great integration for git, showing the current status of changes in a file. It really helps you remember what you were working on, and be aware of what changes you've made. Even more cool. If you were workig on two different changes by mistake, you can easily stage just some of them for commiting.
+This offers some great integration for git, showing the current status of
+changes in a file. It really helps you remember what you were working on, and
+be aware of what changes you've made. Even more cool. If you were workig on two
+different changes by mistake, you can easily stage just some of them for
+commiting.
 
 | Command | Result                  |
 |---------|-------------------------|
@@ -77,7 +99,11 @@ This offers some great integration for git, showing the current status of change
 
 https://github.com/AndrewRadev/splitjoin.vim
 
-Sometimes in any language you want to break a statement up into multiple lines as it gets too long to be easily readable. This great little plugin helps you do most of the dirty work without thinking about it. My only gripe at the moment is that it still prefers the older Ruby hash syntax. But, it's great, take it for a spin.
+Sometimes in any language you want to break a statement up into multiple lines
+as it gets too long to be easily readable. This great little plugin helps you
+do most of the dirty work without thinking about it. My only gripe at the
+moment is that it still prefers the older Ruby hash syntax. But, it's great,
+take it for a spin.
 
 | Command | Result                                                          |
 |---------|-----------------------------------------------------------------|
@@ -116,9 +142,23 @@ Some of my favorite and most used shortcuts.
 | `zR`      | Unfold everything in a file             |
 | `zr`      | Unfold everything at a particular level |
 
+### Rails.vim
+https://github.com/tpope/vim-rails
+https://wincent.com/wiki/rails.vim_cheatsheet
+
+Rails.vim adds some syntax highlighint along with some other nicities
+
+| command | result                                         |
+|---------|------------------------------------------------|
+| `:A`    | Open associated spec or file                   |
+| `:AV`   | Open associated spec or file in vertical split |
+| `:AS`   | Open associated spec or file in split          |
+
+
 ### Splits and Tabs
 
-Super useful feature of vim for laying out different files next to each other, so that you can see everything you want to see at one time.
+Super useful feature of vim for laying out different files next to each other,
+so that you can see everything you want to see at one time.
 
 | command   | result                                                                                                                  |
 |-----------|-------------------------------------------------------------------------------------------------------------------------|
@@ -131,7 +171,14 @@ Super useful feature of vim for laying out different files next to each other, s
 
 ### Sessions
 
-Sessions are a quick way of saving window layouts, including spits, tabs, and even even set variables. I use it in a very simple way, which is just to output a `Session.vim` file in the current directory. I often need to drop what I'm working on to check out something on another git branch, which can cause issues with which files I want open. Usually I have things arranged in such a way that I have tests in one tab, and related code in another, or test/code pairs in each tab. It just depends on what I'm working on. With sessions, I can quickly save the state of the windows I was working on.
+Sessions are a quick way of saving window layouts, including spits, tabs, and
+even even set variables. I use it in a very simple way, which is just to output
+a `Session.vim` file in the current directory. I often need to drop what I'm
+working on to check out something on another git branch, which can cause issues
+with which files I want open. Usually I have things arranged in such a way that
+I have tests in one tab, and related code in another, or test/code pairs in
+each tab. It just depends on what I'm working on. With sessions, I can quickly
+save the state of the windows I was working on.
 
 | command                | result                                                       |
 |------------------------|--------------------------------------------------------------|

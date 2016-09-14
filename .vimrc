@@ -163,9 +163,10 @@ endif
 " Base16 plugin options
 let base16colorspace=256    " Enable 256 color mode
 " colorscheme base16-default
-" color flattown
 set background=dark         " Use dark instead of light
-colorscheme hybrid
+" colorscheme hybrid
+colorscheme flattown
+highlight NonText ctermfg=bg
 
 let g:ruby_path                           = '~/.rbenv/shims/ruby'
 let g:syntastic_ruby_checkers             = ['rubocop', 'mri']
@@ -197,8 +198,8 @@ let g:UltiSnipsExpandTrigger="<tab><tab>"
 " ----------------------------------------------------------------------------
 
 function! CopyFilePath()
-  let l:filePath = expand('%')
-  execute ':silent !echo ' . l:filePath . " | pbcopy"
+  let filePath = expand('%')
+  execute ':silent !echo ' . filePath . " | pbcopy"
   redraw!
   echo "Path to file copied to clipboard!"
 endfunction
@@ -330,6 +331,14 @@ function! RegenerateCtagsForYCM()
   execute ":silent !ctags -R -f ./.tags --fields=+l"
   redraw!
   echo "Regenerated ctags in .tags"
+endfunction
+
+function! Strip(input_string)
+  return substitute(a:input_string, '^\s*\(.\{-}\)\s*$', '\1', '')
+endfunction
+
+function! Chomp(string)
+      return substitute(a:string, '\n\+$', '', '')
 endfunction
 
 " }}}

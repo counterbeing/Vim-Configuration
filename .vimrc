@@ -59,12 +59,8 @@ if has("mouse")
   set mouse=a                  " Enable Mouse support
 endif
 
+set ttymouse=sgr
 set mouse+=a
-if &term =~ '^screen'
-  " tmux knows the extended mouse mode
-  " Allows for things like pane resizing within a tmux session
-  set ttymouse=xterm2
-endif
 
 set scrolloff=3                " how many lines to pad between cursor and edge of page when scrolling
 set backspace=indent,eol,start " allow backspacing over autoindent, line breaks, start of inserts

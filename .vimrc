@@ -133,39 +133,19 @@ set foldmethod=indent   " fold based on indent level
 nnoremap <space> za|    " space open/closes folds
 
 " }}}-------------------------------------------------------------------------
-" Indentation and Whitespace                                               {{{
-" ----------------------------------------------------------------------------
-
-set tabstop=2      " How many spaces per <Tab> char, for existing text
-set shiftwidth=2   " Number of space chars used for indentation
-set softtabstop=2  " Treat our hard tabs like soft tabs (backspace deletes 2 spaces)
-set expandtab      " When inserting <Tab> char, write as spaces instead.
-set autoindent     " copies indentation level from the previous line, shouldn't interfere with filetype indent.
-filetype plugin on " determine various behaviour by file extension
-filetype indent on " indent based on file-type
-
-" Filetype-specific settings
-autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
-autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
-
-" }}}-------------------------------------------------------------------------
-" Color & Syntax                                                           {{{
 " ----------------------------------------------------------------------------
 
 
 
 syntax on                   " enable file syntax highlighting
 
+" set t_Co=256              " Force 256 color only if needed
 if &term == "screen"
   set t_Co=256              " Force 256 color only if needed
 endif
 
-" Base16 plugin options
-let base16colorspace=256    " Enable 256 color mode
-" colorscheme base16-default
 set background=dark         " Use dark instead of light
-" colorscheme hybrid
-colorscheme flattown
+colorscheme sierra
 highlight NonText ctermfg=bg
 
 let g:ruby_path                           = '~/.rbenv/shims/ruby'
@@ -180,7 +160,7 @@ let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a
 " ----------------------------------------------------------------------------
 
 " let g:indentLine_noConcealCursor="" " prevent conflict in vim-json and indentLine
-" hi link jsonBraces Function| " pretty blue braces instead of red
+let g:indentLine_char = '┆'
 set synmaxcol=500 " Prevent performance issues on long lines
 set nowrap        " Don't wrap lines by default
 set cursorline  " highlight cursor location
@@ -198,7 +178,9 @@ let g:UltiSnipsExpandTrigger="<tab><tab>"
 " ----------------------------------------------------------------------------
 
 function! CopyFilePath()
-  let filePath = expand('%')
+  let filePath = Chomp(expand('%'))
+  echo filePath
+
   execute ':silent !echo ' . filePath . " | pbcopy"
   redraw!
   echo "Path to file copied to clipboard!"

@@ -52,9 +52,7 @@ Plug 'SirVer/ultisnips'                                 " Snippets loader
 Plug 'honza/vim-snippets'                               " Predefined snippets
 
 " Color Schemes
-Plug 'blerins/flattown'                                 " Simple colors
-Plug 'scwood/vim-hybrid'
-Plug 'chriskempson/base16-vim'
+Plug 'flazz/vim-colorschemes'                                 " Simple colors
 
 filetype plugin indent on                               " required!
 call plug#end()

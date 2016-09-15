@@ -133,9 +133,24 @@ set foldmethod=indent   " fold based on indent level
 nnoremap <space> za|    " space open/closes folds
 
 " }}}-------------------------------------------------------------------------
+" Indentation and Whitespace                                               {{{
 " ----------------------------------------------------------------------------
 
+set tabstop=2      " How many spaces per <Tab> char, for existing text
+set shiftwidth=2   " Number of space chars used for indentation
+set softtabstop=2  " Treat our hard tabs like soft tabs (backspace deletes 2 spaces)
+set expandtab      " When inserting <Tab> char, write as spaces instead.
+set autoindent     " copies indentation level from the previous line, shouldn't interfere with filetype indent.
+filetype plugin on " determine various behaviour by file extension
+filetype indent on " indent based on file-type
 
+" Filetype-specific settings
+autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
+" }}}-------------------------------------------------------------------------
+" Color & Syntax                                                           {{{
+" ----------------------------------------------------------------------------
 
 syntax on                   " enable file syntax highlighting
 

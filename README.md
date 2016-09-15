@@ -187,3 +187,11 @@ save the state of the windows I was working on.
 | `:mks!`                | Same as above except forces overwrite.                       |
 | `$ vim -S Session.vim` | Open a VIM session file and open all of the tabs and splits. |
 
+
+## Things To Improve
+
+- [ ] Remove trailing line from copy to clipboard commands
+- [ ] Fix highlight color of vertical rule on indented lines
+- [ ] Add vertical rule to mark 80 char line lenght for select languages
+- [ ] Get output from rspec to easily go to broken test
+

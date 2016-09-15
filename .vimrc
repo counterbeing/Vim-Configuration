@@ -96,7 +96,7 @@ if executable('ag')
 command! Tab :Tabularize
 map Q gq|                          " Shortcut to rewrap selected text
 command! W :w                      " For fat fingers: make :W == :w
-imap <c-c> <esc>|                  " Map Ctrl-c to <Esc> to ease finger gymnastics
+" imap <c-c> <esc>|                  " Map Ctrl-c to <Esc> to ease finger gymnastics
 imap <S-CR> <CR><CR>end<Esc>-cc|   " Shift-Enger to insert 'end' from insert mode, broken?
 map <leader>m Jxi\n<ESC>|          " Merge Lines, replacing newlines with \n char
 map <leader>w :set wrap!<CR>|      " Toggle line wrapping

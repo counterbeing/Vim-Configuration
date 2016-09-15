@@ -50,6 +50,8 @@ Plug 'jgdavey/vim-blockle'                              " Convert block formats
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' } " Advanced autocomplete
 Plug 'SirVer/ultisnips'                                 " Snippets loader
 Plug 'honza/vim-snippets'                               " Predefined snippets
+" Plug 'raimondi/delimitmate'
+" Plug 'tpope/vim-endwise'
 
 " Color Schemes
 Plug 'flazz/vim-colorschemes'                                 " Simple colors

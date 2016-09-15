@@ -188,6 +188,9 @@ let g:table_mode_corner="|"
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:UltiSnipsExpandTrigger="<tab><tab>"
 
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_fenced_languages = ['ruby=rb', ['js=js']]
+
 " }}}-------------------------------------------------------------------------
 " Custom Functions                                                         {{{
 " ----------------------------------------------------------------------------

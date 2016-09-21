@@ -28,6 +28,8 @@ Plug 'othree/html5.vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'Keithbsmiley/rspec.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'hashivim/vim-terraform'
+Plug 'fatih/vim-nginx'
 
 "Do Stuff Plugins
 Plug 'dhruvasagar/vim-table-mode'                       " Easily create tables

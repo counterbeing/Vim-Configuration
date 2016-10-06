@@ -72,7 +72,7 @@ set incsearch                  " move cursor to matched string while typing patt
 
 " Nerd Tree binding and plugin options
 map <leader>n :NERDTreeToggle <Return>
-nmap <leader>nn :NERDTreeFind<CR>
+nmap <leader>N :NERDTreeFind<CR>
 let NERDTreeDirArrows=0
 let NERDTreeIgnore = ['\.DS_Store$']
 
@@ -175,7 +175,8 @@ let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a
 " ----------------------------------------------------------------------------
 
 " let g:indentLine_noConcealCursor="" " prevent conflict in vim-json and indentLine
-let g:indentLine_char = '┆'
+" let g:indentLine_char = '┆'
+let g:indentLine_enabled = 0
 set synmaxcol=500 " Prevent performance issues on long lines
 set nowrap        " Don't wrap lines by default
 set cursorline  " highlight cursor location
@@ -196,7 +197,7 @@ let g:vim_markdown_fenced_languages = ['ruby=rb', ['js=js']]
 " ----------------------------------------------------------------------------
 
 function! CopyFilePath()
-  let filePath = Chomp(expand('%'))
+  let filePath = Chomp(fnamemodify(expand("%"), ":~:."))
   echo filePath
 
   execute ':silent !echo ' . filePath . " | pbcopy"
@@ -210,7 +211,7 @@ endfunction
 " this to work when your rails app is running in some kind of container.
 function! CopySpecCommand()
   let l:lineNumber = line('.')
-  let l:filePath = expand('%')
+  let l:filePath = fnamemodify(expand("%"), ":~:.")
   let l:fullPath =  "rspec " . "./" . l:filePath .  ":" . l:lineNumber
   execute ':silent !echo ' . l:fullPath . " | pbcopy"
   redraw!
@@ -224,7 +225,7 @@ endfunction
 let g:pasteMode = 0
 function! PasteToggle()
   if g:pasteMode
-    IndentLinesEnable
+    " bufdo IndentLinesEnable
     GitGutterEnable
     set nopaste
     set nowrap
@@ -236,7 +237,7 @@ function! PasteToggle()
     let g:pasteMode = 0
     echom "Paste mode OFF!"
   else
-    IndentLinesDisable
+    " bufdo IndentLinesDisable
     GitGutterDisable
     set mouse=""
     set paste
@@ -323,7 +324,8 @@ function! VisualFindAndReplaceWithSelection() range
 endfunction
 
 function! RunRubocop()
-  execute ":silent !NO_BUNDLE_EXEC=1 rubocop -f s -Ra ./%"
+  let filePath = fnamemodify(expand("%"), ":~:.")
+  execute ':silent !NO_BUNDLE_EXEC=1 rubocop -f s -Ra ./' . filePath
   redraw!
 endfunction
 

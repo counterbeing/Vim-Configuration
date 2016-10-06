@@ -54,6 +54,7 @@ Plug 'SirVer/ultisnips'                                 " Snippets loader
 Plug 'honza/vim-snippets'                               " Predefined snippets
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-endwise'
+Plug 'dkprice/vim-easygrep'                             " Search and replace in project
 
 " Color Schemes
 Plug 'flazz/vim-colorschemes'                                 " Simple colors

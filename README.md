@@ -119,6 +119,7 @@ take it for a spin.
 | `,r`     | Reveals a particular file in the finder.                                               |
 | `,j`     | Pretty formats selected json.                                                          |
 | `CTRL-y` | Yanks selected text to system clipboard.                                               |
+| `,R`     | Runs rubocop autocorrect on current file.       |
 
 ## General Vim Reminders
 

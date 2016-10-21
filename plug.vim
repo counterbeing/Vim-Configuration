@@ -43,7 +43,7 @@ Plug 'tpope/vim-fugitive'                               " Vim based git access
 Plug 'tomtom/tcomment_vim'                              " Super fast commenting (try gcc for one line)
 Plug 'taylor/vim-zoomwin'                               " Zooms in on a specific window when you have a bunch of splits
 Plug 'godlygeek/tabular'                                " Regex based indentation
-Plug 'scrooloose/syntastic'                             " Shows syntax errors in sidebar
+Plug 'w0rp/ale'                                         " Shows syntax errors in sidebar
 Plug 'mileszs/ack.vim'                                  " Allows searching through many files for a specific string
 Plug 'AndrewRadev/splitjoin.vim'                        " Auto-format code on single or multi lines
 Plug 'Yggdroot/indentLine'                              " Adds vertical lines for code blocks

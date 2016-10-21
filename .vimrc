@@ -135,7 +135,6 @@ nnoremap <space> za|    " space open/closes folds
 " }}}-------------------------------------------------------------------------
 " Indentation and Whitespace                                               {{{
 " ----------------------------------------------------------------------------
-
 set tabstop=2      " How many spaces per <Tab> char, for existing text
 set shiftwidth=2   " Number of space chars used for indentation
 set softtabstop=2  " Treat our hard tabs like soft tabs (backspace deletes 2 spaces)
@@ -325,6 +324,7 @@ endfunction
 
 function! RunRubocop()
   let filePath = fnamemodify(expand("%"), ":~:.")
+  execute ':silent w'
   execute ':silent !NO_BUNDLE_EXEC=1 rubocop -f s -Ra ./' . filePath
   redraw!
 endfunction
@@ -344,5 +344,4 @@ function! Chomp(string)
 endfunction
 
 " }}}
-" vim:foldmethod=marker:foldlevel=0
 

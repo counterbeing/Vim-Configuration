@@ -12,6 +12,7 @@
 " Base                                                                     {{{
 " ----------------------------------------------------------------------------
 
+set shell=bash
 set nocompatible           " be iMproved, required
 source $HOME/.vim/plug.vim " load plugins
 filetype off               " required

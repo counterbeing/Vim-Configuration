@@ -52,7 +52,6 @@ Plug 'jgdavey/vim-blockle'                              " Convert block formats
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' } " Advanced autocomplete
 Plug 'SirVer/ultisnips'                                 " Snippets loader
 Plug 'honza/vim-snippets'                               " Predefined snippets
-Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-endwise'
 Plug 'dkprice/vim-easygrep'                             " Search and replace in project
 Plug 'terryma/vim-multiple-cursors'                     
